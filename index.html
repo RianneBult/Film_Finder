@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film finder</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="movies.js?speed=2"></script>
+    <script defer src="script.js?speed=2"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Film Finder</h1>
+        <div class="search-bar">
+            <input type="search" placeholder="Zoeken.." id="searchBar" class="input-search">
+        </div>
+        <nav>
+            <div><input type="radio" id="latest-movies" name="movie-filter" value="latest-movies">
+                <label for="latest-movies">Latest Movies, 2014 or newer</label>
+            </div>
+            <div><input type="radio" id="avenger-movies" name="movie-filter" value="avenger-movies">
+                <label for="avenger">Avenger Movies</label>
+            </div>
+            <div><input type="radio" id="x-men-movies" name="movie-filter" value="x-men-movies">
+                <label for="x-men">X-Men Movies</label>
+            </div>
+            <div><input type="radio" id="princess-movies" name="movie-filter" value="princess-movies">
+                <label for="princess">Princess Movies</label>
+            </div>
+            <div><input type="radio" id="batman-movies" name="movie-filter" value="batman-movies">
+                <label for="batman">Batman Movies</label>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <ul id="list-movies"></ul>
+    </main>
+</body>
+
+</html>

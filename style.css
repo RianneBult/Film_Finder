@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1, .search-bar{
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar{
+    margin-top: 70px;
+}
+
+.input-search{
+    height: 30px;
+    width: 200px;
+    padding-left: 5px;
+    border: none;
+}
+
+.input-search:focus{
+    outline: none;
+}
+
+nav{
+    margin: 30px 0 30px 30px;
+}
+
+nav > div{
+    padding: 5px 0;
+}
+
+img{
+    padding: 8px;
+}
+
+
+@media (min-width: 850px){
+    nav{
+        display: flex;
+        justify-content: center;
+        margin: 30px 0 60px 0;
+    }
+
+    nav > div{
+        padding: 0 10px;
+    }
+}
