@@ -3,7 +3,7 @@ const radioButtons = document.querySelectorAll("input[name=movie-filter]");
 const searchBar = document.getElementById("searchBar");
 
 const addMoviesToDom = (movies) => {
-    movies.map(movie => {
+    movies.forEach(movie => {
         const a = document.createElement("a");
         a.href = "https://www.imdb.com/title/" + movie.imdbID;
         a.target = "_blank";
@@ -24,12 +24,6 @@ const filterMovies = (wordInMovies) => {
 const filterLatestMovies = () => {
     const getLatestMovies = movies.filter(movie => movie.year >= 2014);
     addMoviesToDom(getLatestMovies);
-}
-
-const eventListeners = () => {
-    radioButtons.forEach((e) => {
-        e.addEventListener("change", handleOnChangeEvent);
-    })
 }
 
 const handleOnChangeEvent = (event) => {
@@ -56,7 +50,7 @@ const handleOnChangeEvent = (event) => {
     }
 }
 
-eventListeners();
+radioButtons.forEach(e => e.addEventListener("change", handleOnChangeEvent));
 
 searchBar.addEventListener("input", (e) => {
     const value = e.target.value.toLowerCase();
